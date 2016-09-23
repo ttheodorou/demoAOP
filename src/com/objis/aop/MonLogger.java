@@ -5,6 +5,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.JoinPoint.StaticPart;
 
 public class MonLogger {
+
 	/*
 	 * Cette méthode est appelée à chaque fois (et avant) qu'une méthode du
 	 * package com.objis.service est interceptée
@@ -57,7 +58,7 @@ public class MonLogger {
 	//PAS AU POINT
 //	public Object doBasicProfiling2(ProceedingJoinPoint pjp)
 //			throws Throwable {
-//		JoinPoint joinPoint = null;
+//		
 //		logMethodEntry(joinPoint);
 //		Object retVal = pjp.proceed();
 //		StaticPart staticPart = null; Object result = null;
