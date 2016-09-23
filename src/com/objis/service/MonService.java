@@ -7,4 +7,10 @@ public class MonService {
 		System.out.println(s);
 		return s;
 	}
+	public String bye(String msg){
+		String s = "dis aurevoir " + msg;
+		System.out.println(s);
+		return s;
+	}
+	
 }

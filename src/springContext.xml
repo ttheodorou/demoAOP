@@ -16,8 +16,10 @@
 	<aop:config>
 		<aop:pointcut id="servicePointcut"  expression="execution(* com.objis.service.*.*(..))"/>    		
 		<aop:aspect id="loggingAspect" ref="monLogger">
-		    <aop:before method="logMethodEntry"  pointcut-ref="servicePointcut"/>    		
-		    <aop:after-returning method="logMethodExit" returning="result" pointcut-ref="servicePointcut"/>
+<!-- 		    <aop:before method="logMethodEntry"  pointcut-ref="servicePointcut"/>    	 -->
+<!-- 		    <aop:after method="logMethodAfter" pointcut-ref="servicePointcut"/>	 -->
+<!-- 		    <aop:after-returning method="logMethodExit" returning="result" pointcut-ref="servicePointcut"/> -->
+		    <aop:around method="doBasicProfiling" pointcut-ref="servicePointcut"/>
 	    </aop:aspect>	    
 	</aop:config>
 	<!--	Fin de la configuration POA -->	    
